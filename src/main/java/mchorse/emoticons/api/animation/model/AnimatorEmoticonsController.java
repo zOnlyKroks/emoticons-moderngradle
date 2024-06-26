@@ -139,7 +139,7 @@ public class AnimatorEmoticonsController extends AnimatorController
             ItemArmor item = (ItemArmor) stack.getItem();
 
             config.visible = true;
-            config.texture = this.getArmorResource(entity, stack, slot, null);
+            config.texture = this.getArmorResource(entity, stack,item, slot, null);
             config.color = 0xffffffff;
 
             if (item.hasOverlay(stack))
@@ -163,9 +163,8 @@ public class AnimatorEmoticonsController extends AnimatorController
      * @param type Subtype, can be null or "overlay"
      * @return ResourceLocation pointing at the armor's texture
      */
-    private ResourceLocation getArmorResource(net.minecraft.entity.Entity entity, ItemStack stack, EntityEquipmentSlot slot, String type)
+    private ResourceLocation getArmorResource(net.minecraft.entity.Entity entity, ItemStack stack,ItemArmor item, EntityEquipmentSlot slot, String type)
     {
-        ItemArmor item = (ItemArmor) stack.getItem();
         String texture = item.getArmorMaterial().getName();
         String domain = "minecraft";
         int idx = texture.indexOf(':');

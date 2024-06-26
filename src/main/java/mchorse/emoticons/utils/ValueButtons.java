@@ -15,6 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ValueButtons extends ValueGUI
@@ -35,6 +36,6 @@ public class ValueButtons extends ValueGUI
         });
         GuiButtonElement open = new GuiButtonElement(mc, IKey.lang("emoticons.config.open"), (button) -> GuiUtils.openFolder(new File(ClientProxy.configFolder, "emotes").getAbsolutePath()));
 
-        return Arrays.asList(Elements.row(mc, 5, 0, 20, reload, open));
+        return Collections.singletonList(Elements.row(mc, 5, 0, 20, reload, open));
     }
 }

@@ -1,6 +1,5 @@
 package mchorse.emoticons.network.client;
 
-import mchorse.emoticons.api.metamorph.MetamorphHandler;
 import mchorse.emoticons.capabilities.cosmetic.Cosmetic;
 import mchorse.emoticons.capabilities.cosmetic.ICosmetic;
 import mchorse.emoticons.network.common.PacketEmote;
@@ -26,11 +25,6 @@ public class ClientHandlerEmote extends ClientMessageHandler<PacketEmote>
             if (cap != null)
             {
                 cap.setEmote(message.emote, (EntityLivingBase) entity);
-            }
-
-            if (MetamorphHandler.isLoaded() && entity instanceof EntityLivingBase)
-            {
-                MetamorphHandler.setEmote(message.emote, (EntityLivingBase) entity);
             }
         }
     }

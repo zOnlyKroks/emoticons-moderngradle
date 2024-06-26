@@ -22,13 +22,13 @@ import java.util.List;
 
 public class GuiEmotes extends GuiBase
 {
-    private EmoteKeys keys;
+    private final EmoteKeys keys;
 
-    private GuiSeachEmoteList emotes;
-    private GuiEmoticonsModelRenderer model;
-    private List<GuiButtonElement> buttons = new ArrayList<GuiButtonElement>();
+    private final GuiSeachEmoteList emotes;
+    private final GuiEmoticonsModelRenderer model;
+    private final List<GuiButtonElement> buttons = new ArrayList<GuiButtonElement>();
 
-    private String subtitle;
+    private final String subtitle;
     private int index;
 
     public GuiEmotes()
@@ -71,7 +71,7 @@ public class GuiEmotes extends GuiBase
             this.fontRenderer.drawStringWithShadow(label, 0, 0, 0xffffff);
             GlStateManager.popMatrix();
 
-            this.fontRenderer.drawStringWithShadow(subtitle, x - subtitleW / 2, y + 24, 0xaaaaaa);
+            this.fontRenderer.drawStringWithShadow(subtitle, x - (float) subtitleW / 2, y + 24, 0xaaaaaa);
         }));
 
         for (int i = 1; i <= 6; i ++)

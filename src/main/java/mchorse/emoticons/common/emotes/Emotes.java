@@ -17,7 +17,7 @@ import java.util.Map;
  */
 public class Emotes
 {
-    public static final Map<String, Emote> EMOTES = new HashMap<String, Emote>();
+    public static final Map<String, Emote> EMOTES = new HashMap<>();
 
     private static boolean REGISTERED;
 

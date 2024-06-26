@@ -2,7 +2,6 @@ package mchorse.emoticons.skin_n_bones.api.animation.model;
 
 import mchorse.emoticons.skin_n_bones.api.animation.Animation;
 import mchorse.emoticons.skin_n_bones.api.bobj.BOBJArmature;
-import mchorse.emoticons.utils.PlayerReviveUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -180,7 +179,8 @@ public class Animator implements IAnimator
         {
             this.setActiveAction(this.dying);
         }
-        else if (target.isPlayerSleeping() || PlayerReviveUtils.isPlayerBleeding(target))
+        //TODO: Handle player killed / shot down
+        else if (target.isPlayerSleeping())
         {
             this.setActiveAction(this.sleeping);
         }

@@ -204,7 +204,7 @@ public class AnimationSimpleMesh extends AnimationMesh
         }
     }
 
-    public static enum JointType
+    public enum JointType
     {
         LEG, ARM, BODY, NONE
     }

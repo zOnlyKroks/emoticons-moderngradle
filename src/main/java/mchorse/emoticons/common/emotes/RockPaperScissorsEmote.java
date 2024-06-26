@@ -33,7 +33,7 @@ public class RockPaperScissorsEmote extends Emote
 
         if (rand <= 10) suffix = "rock";
         else if (rand <= 20) suffix = "paper";
-        else if (rand <= 30) suffix = "scissors";
+        else suffix = "scissors";
 
         return this.getDynamicEmote(suffix);
     }

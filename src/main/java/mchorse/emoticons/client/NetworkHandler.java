@@ -1,6 +1,7 @@
 package mchorse.emoticons.client;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 import mchorse.emoticons.ClientProxy;
 import mchorse.emoticons.capabilities.cosmetic.Cosmetic;
@@ -39,7 +40,7 @@ public class NetworkHandler
                 array[i] = buffer.readByte();
             }
 
-            String data = new String(array, Charset.forName("UTF-8")).trim();
+            String data = new String(array, StandardCharsets.UTF_8).trim();
             String[] args = data.split(" ");
 
             if (args.length >= 1)

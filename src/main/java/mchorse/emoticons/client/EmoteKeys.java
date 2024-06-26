@@ -50,7 +50,7 @@ public class EmoteKeys
         {
             FileUtils.write(file, gson.toJson(keys), Charset.defaultCharset());
         }
-        catch (IOException e)
+        catch (IOException ignored)
         {}
     }
 

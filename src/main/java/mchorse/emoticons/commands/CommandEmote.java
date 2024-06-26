@@ -35,8 +35,7 @@ public class CommandEmote extends CommandBase
     }
 
     @Override
-    public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
-    {
+    public void execute(MinecraftServer server, ICommandSender sender, String[] args) {
         String emote = args.length >= 1 ? args[0] : "";
 
         if (!Emotes.has(emote))

@@ -4,7 +4,6 @@ import mchorse.blockbuster.Blockbuster;
 import mchorse.blockbuster.events.ActionPanelRegisterEvent;
 import mchorse.emoticons.ClientProxy;
 import mchorse.emoticons.Emoticons;
-import mchorse.emoticons.api.metamorph.MetamorphHandler;
 import mchorse.emoticons.blockbuster.EmoteAction;
 import mchorse.emoticons.blockbuster.GuiEmoteActionPanel;
 import mchorse.emoticons.capabilities.cosmetic.Cosmetic;
@@ -111,7 +110,7 @@ public class EntityModelHandler
     {
         EntityPlayer player = event.getEntityPlayer();
 
-        if (player.isSpectator() || MetamorphHandler.hasSelector(player))
+        if (player.isSpectator())
         {
             return;
         }

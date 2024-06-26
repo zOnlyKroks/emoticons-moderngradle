@@ -3,7 +3,6 @@ package mchorse.emoticons;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import mchorse.emoticons.api.metamorph.MetamorphHandler;
 import mchorse.emoticons.blockbuster.BBIntegration;
 import mchorse.emoticons.capabilities.CapabilitiesHandler;
 import mchorse.emoticons.capabilities.cosmetic.Cosmetic;
@@ -84,7 +83,7 @@ public class CommonProxy
     private static Emote createEmote(String key, int length, JsonObject object)
     {
         boolean looping = object.has("looping") && object.get("looping").getAsBoolean();
-        Emote emote = MetamorphHandler.createEmote(key, length, looping, object);
+        Emote emote = new Emote(key, length, looping, null);
 
         if (object.has("title"))
         {
@@ -110,7 +109,6 @@ public class CommonProxy
         Dispatcher.register();
 
         if (BBIntegration.isLoaded()) BBIntegration.register();
-        if (MetamorphHandler.isLoaded()) MetamorphHandler.register();
     }
 
     public void init(FMLInitializationEvent event)
